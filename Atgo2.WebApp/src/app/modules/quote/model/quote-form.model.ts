@@ -1,0 +1,58 @@
+import { PersonProfileModel }   from '../../../shared/models/personprofile.model';
+import { AddressModel }         from '../../../shared/models/address.model';
+import { PortModel }            from '../../../shared/models/port.model';
+import { DimensionModel }       from '../../../shared/models/dimension.model';
+import { IncoTermModel }        from '../../../shared/models/incoterm.model';
+import { BranchModel }          from '../../../shared/models/branch.model';
+
+export interface QuoteFormModel {
+    quoteNo: string;
+    quoteDate: string;
+    quoteBranch: BranchModel;
+    quoteSalesExecutive: PersonProfileModel;    
+    quoteOriginAddress: AddressModel;    
+    quoteOriginAddressPrint: string;
+    quoteOriginPort: PortModel;    
+    quoteOriginDate: string;
+    quoteDestinationAddress: AddressModel;    
+    quoteDestinationAddressPrint: string;
+    quoteDestinationPort: PortModel;    
+    quoteDeliveryDate: string;
+    quoteIncoTerm: IncoTermModel;    
+    quotePackageDimension: DimensionModel;    
+    quotePackageDimensionDisplayValue: string;
+    quotePickPointLocation: string;
+    quoteDropPointLocation: string;
+    quoteHazordous: string;
+    quoteInsurance: string;
+    quotePerishable: string;
+    quoteTermsandConditions: string;
+    quoteGoodsDescriptionForPrint: string;
+    quoteGoodsDescriptionDetail: string;
+    quoteRemarks: string;
+
+    // quoteCustomerName: string; 
+    // quoteCustomerAddress: string;
+    // quoteCustomerPrimaryPhone: string;
+    // quoteCustomerAlternatePhone: string;
+    // quoteCustomerEmailId: string;
+    // quoteOriginAddress1: string;
+    // quoteOriginAddress2: string;
+    // quoteOriginCity: string;
+    // quoteOriginState: string;
+    // quoteOriginCountry: string;
+    // quoteOriginPortId: string;
+    // quoteOriginPortCode: string;
+    // quoteDestinationPortId: string;
+    // quoteDestinationAddress: string;
+    // quoteDestinationCity: string;
+    // quoteDestinationState: string;
+    // quoteDestinationCountry: string;
+    // quoteDestinationPortCode: string;
+    // quoteIncoTermPrintCode: string;
+    // quotePackageDimensionxHeight: number;  
+    // quotePackageDimensionxLength: number;
+    // quotePackageDimensionxWidth: number;
+    // quotePackageDimensionxGrossWeight: number;
+    // quotePackageDimensionxChassisWeight: number;
+}

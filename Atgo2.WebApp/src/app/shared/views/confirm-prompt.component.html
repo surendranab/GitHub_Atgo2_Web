@@ -1,0 +1,15 @@
+<bs-modal [backdrop]="isNoBackdrop ? false : static" keyboard="false" #modal>
+    <bs-modal-header [showDismiss]="true">
+        <h4 class="modal-title">I'm a modal!</h4>
+    </bs-modal-header>
+    <bs-modal-body>
+      {{message}}
+    </bs-modal-body>
+    <bs-modal-footer>
+      <button type="button" class="btn btn-primary" *ngIf="!showOK" (click)="onYesClick()">Yes</button>
+      <button type="button" class="btn btn-default" *ngIf="!showOK" (click)="onNoClick()">No</button>
+      <button type="button" class="btn btn-default" *ngIf="showCancel" (click)="onCancelClick()">Cancel</button>
+      <button type="button" class="btn btn-primary" *ngIf="showOK" (click)="onYesClick()">Ok</button>
+    </bs-modal-footer>
+  </bs-modal>
+  

@@ -1,0 +1,254 @@
+<div class="row">
+  <div class="col-lg-12 ">
+    <div class="card">
+      <div class="card-header">
+        <strong>Quote</strong> Form
+      </div>
+      <div class="card-body">
+        <form action=" " method="post">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteNo">Quote No.</label>
+                <input type="text" id="quoteNo" name="quoteNo" class="form-control" readonly placeholder="###-#####">                
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group row">                  
+                  <div class="col-md-12 ">
+                    <label for="quoteDt">Quote Dt.</label>
+                    <div class="input-group ">
+                      <input type="text" id="quoteDt" name="quoteDt" class="form-control " placeholder="dd/mm/yyyy">
+                      <div class="input-group-append ">
+                        <span class="input-group-text "><i class="icon-calendar"></i></span>
+                      </div>
+                    </div>
+                  </div>
+
+                <!-- 
+                <input type="text" id="quoteDt" name="quoteDt" class="form-control" placeholder="DD/MM/YYYY"> -->
+                <!-- <my-date-picker placeholder="mm/dd/yyyy" [options]="myDatePickerOptions" [ngModel]="dateModel" (dateChanged)="onDateChanged($event)" (inputFieldChanged)="onDateChangeFormat($event)"
+                (keypress)="validationService.onDateChangeFormat($event)" name="dob" #dob="ngModel" required></my-date-picker>
+                <p class="date-format-text">Required format mm/dd/yyyy</p> -->
+                <span class="invalid-feedback">Required format dd/mm/yyyy</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="form-group">                  
+                  <div class="col-md-12 ">
+                      <label for="quoteBranch">Branch</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                      </div>
+                      <input type="text" id="quoteBranch" name="quoteBranch" class="form-control" placeholder="Branch">
+                      <span class="invalid-feedback">Select a Branch</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-lg-3">
+              <div class="form-group">                
+                <div class="col-md-12 ">
+                  <label for="quoteSalesExecutive">Sales Executive</label>
+                  <div class="input-group ">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" id="quoteSalesExecutive" name="quoteSalesExecutive" class="form-control" placeholder="Sales Executive">
+                    <span class="invalid-feedback">Select a Sales Executive</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>            
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="form-group">                
+                <div class="col-md-12 ">
+                  <label for="quoteCustomer">Customer Name</label>
+                  <div class="input-group ">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>                        
+                    <input type="text" id="quoteCustomer" name="quoteCustomer" class="form-control is-invalid" placeholder="Customer">
+                    <span class="invalid-feedback">Select a Customer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                  <label for="quoteCustomer">Origin Address</label>
+                  <input type="text" id="quoteCustomer" name="quoteOriginAddress" class="form-control" placeholder="Origin Address">
+                  <span class="invalid-feedback">Enter an Origin address</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">                
+                <div class="col-md-12 ">
+                  <label for="quoteCustomer">Origin Port</label>
+                  <div class="input-group ">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fa fa-search"></i></span>
+                    </div>
+                    <input type="text" id="quoteOriginPort" name="quoteOriginPort" class="form-control" placeholder="Origin Port">
+                    <span class="invalid-feedback">Select Origin port</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                  <div class="col-md-12 ">
+                    <label for="quoteOriginDt">Origin Dt.</label>
+                    <div class="input-group">                  
+                      <input type="text" id="quoteOriginDt" name="quoteOriginDt" class="form-control" placeholder="dd/mm/yyyy">
+                      <span class="invalid-feedback">Select Origin Dt.</span>
+                      <div class="input-group-append ">
+                          <span class="input-group-text "><i class="icon-calendar"></i></span>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label for="quoteDestinationAddress">Destination Address</label>
+                  <input type="text" id="quoteDestinationAddress" name="quoteDestinationAddress" class="form-control" placeholder="Destination Address">
+                  <span class="invalid-feedback">Enter Destination Address</span>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">                  
+                  <div class="col-md-12 ">
+                      <label for="quoteDestinationPort">Destination Port</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                      </div>
+                      <input type="text" id="quoteDestinationPort" name="quoteDestinationPort" class="form-control" placeholder="Destination Port">
+                      <span class="invalid-feedback">Enter Destination Port</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label for="quoteDeliveryDt">Delivery Dt.</label>
+                  <div class="input-group">
+                    <input type="text" id="quoteDeliveryDt" name="quoteDeliveryDt" class="form-control" placeholder="dd/mm/yyyy">
+                    <span class="invalid-feedback">Enter Delivery Dt.</span>
+                    <div class="input-group-append ">
+                      <span class="input-group-text "><i class="icon-calendar"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group">                  
+                  <div class="col-md-12 ">
+                    <label for="quoteIncoterm">Inco term</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                      </div>                    
+                      <input type="text" id="quoteIncoterm" name="quoteIncoterm" class="form-control" placeholder="Select">
+                      <span class="invalid-feedback">Select a Incoterm</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quotePackageDimension">Package Dimension</label>
+                <div class="col-md-12">
+                  <div class="input-group ">
+                    <div class="col-lg-4">
+                      <input type="text" id="quotePackageDimensionHeight" name="quotePackageDimensionHeight" class="form-control" placeholder="Height" width="6">
+                    </div>
+                    <div class="col-lg-4">
+                      <input type="text" id="quotePackageDimensionWidth" name="quotePackageDimensionWidth" class="form-control" placeholder="Width" width="6">
+                    </div>
+                    <div class="col-lg-4">
+                      <input type="text" id="quotePackageDimensionBredth" name="quotePackageDimensionBredth" class="form-control" placeholder="Bredth" width="6">
+                    </div>
+                    <span class="invalid-feedback">Enter Package Dimension</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quotePickupPoint">Pickup point</label>
+                <input type="text" id="quotePickupPoint" name="quotePickupPoint" class="form-control" placeholder="Pickup point">
+                <span class="invalid-feedback">Enter Pickup point</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteDropPoint">Drop point</label>
+                <input type="text" id="quoteDropPoint" name="quoteDropPoint" class="form-control" placeholder="Drop point">
+                <span class="invalid-feedback">Enter Drop point</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteHazordous">Hazordous</label>
+                <input type="text" id="quoteHazordous" name="quoteHazordous" class="form-control" placeholder="Hazordous">
+                <span class="invalid-feedback">Enter Hazordous if any</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteInsurance">Insurance</label>
+                <input type="text" id="quoteInsurance" name="quoteInsurance" class="form-control" placeholder="Insurance">
+                <span class="invalid-feedback">Enter Insurance</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quotePerishable">Perishable</label>
+                <input type="text" id="quotePerishable" name="quotePerishable" class="form-control" placeholder="Perishable">
+                <span class="invalid-feedback">Enter Perishable</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteTermsandCondition">Terms &amp; Condition</label>
+                <input type="text" id="quoteTermsandCondition" name="quoteTermsandCondition" class="form-control" placeholder="Terms &amp; Condition">
+                <span class="invalid-feedback">Enter Terms &amp; Condition</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteGoodsDesc">Goods Description</label>
+                <input type="text" id="quoteGoodsDesc" name="quoteGoodsDesc" class="form-control" placeholder="Goods Description">
+                <span class="invalid-feedback">Enter Goods Description</span>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-group">
+                <label for="quoteRemarks">Remarks</label>
+                <input type="text" id="quoteRemarks" name="quoteRemarks" class="form-control" placeholder="Remarks">
+                <span class="invalid-feedback">Enter Remarks</span>
+              </div>
+            </div>
+          </div>
+        </form>      
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,229 @@
+<div class="row">
+  <div class="col-lg-12 ">
+    <div class="card">
+      <div class="card-header">
+        <strong>Quote</strong> Search
+      </div>
+      <div class="card-body">        
+        <form action=" " method="post">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="form-group">
+                  <label for="quoteNo">Quote No.</label>
+                  <input type="text" id="quoteNo" name="quoteNo" class="form-control" placeholder="###-#####">                
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="form-group row">                  
+                    <div class="col-md-12 ">
+                      <label for="quoteDt">From Dt.</label>
+                      <div class="input-group ">
+                        <input type="text" id="quoteDt" name="quoteDt" class="form-control " placeholder="dd/mm/yyyy">
+                        <div class="input-group-append ">
+                          <span class="input-group-text "><i class="icon-calendar"></i></span>
+                        </div>
+                      </div>
+                    </div>                    
+                  <span class="invalid-feedback">Required format dd/mm/yyyy</span>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="form-group row">                  
+                      <div class="col-md-12 ">
+                        <label for="quoteDt">To Dt.</label>
+                        <div class="input-group ">
+                          <input type="text" id="quoteDt" name="quoteDt" class="form-control " placeholder="dd/mm/yyyy">
+                          <div class="input-group-append ">
+                            <span class="input-group-text "><i class="icon-calendar"></i></span>
+                          </div>
+                        </div>
+                      </div>                    
+                    <span class="invalid-feedback">Required format dd/mm/yyyy</span>
+                  </div>
+                </div>
+              <div class="col-lg-3">
+                  <div class="form-group">                  
+                    <div class="col-md-12 ">
+                        <label for="quoteBranch">Branch</label>
+                      <div class="input-group ">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>
+                        <input type="text" id="quoteBranch" name="quoteBranch" class="form-control" placeholder="Branch">
+                        <span class="invalid-feedback">Select a Branch</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>              
+            </div>           
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="form-group">                      
+                        <label for="quoteSalesExecutive">Sales Executive</label>
+                        <div class="input-group ">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-search"></i></span>
+                          </div>
+                          <input type="text" id="quoteSalesExecutive" name="quoteSalesExecutive" class="form-control" placeholder="Sales Executive">
+                          <span class="invalid-feedback">Select a Sales Executive</span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                      <div class="form-group">                      
+                          <label for="quoteCustomer">Customer Name</label>
+                          <div class="input-group ">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text"><i class="fa fa-search"></i></span>
+                            </div>
+                            <input type="text" id="quoteCustomer" name="quoteCustomer" class="form-control" placeholder="Customer">
+                            <span class="invalid-feedback">Select a Customer</span>
+                          </div>
+                      </div>       
+                      </div>                    
+                    <div class="col-lg-3">
+                        <div class="form-group">                      
+                            <label for="quoteToPort">Shipper/Consignee</label>
+                            <div class="input-group ">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-search"></i></span>
+                              </div>
+                              <input type="text" id="quoteParty" name="quoteParty" class="form-control" placeholder="Port">
+                              <span class="invalid-feedback">Select a Shipper/Consignee</span>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="form-group">                      
+                              <label for="quoteFromPort">Port </label>                          
+                              <input type="radio" id="FromPort">From &nbsp; <input type="radio" id="ToPort"> To                    
+                              <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="fa fa-search"></i></span>
+                                </div>
+                                <input type="text" id="quoteFromPort" name="quoteFromPort" class="form-control" placeholder="Port">
+                                <span class="invalid-feedback">Select a Port</span>
+                              </div>
+                          </div>
+                        </div>
+            </div>            
+            <div class="row">
+              <div class="col-lg-12">
+                  <div class="form-group float-right">
+                      <button class="btn btn-primary">
+                          <i class="fa fa-search" aria-hidden="true"></i>
+                          <span>Search</span>
+                      </button>
+                      <button class="btn btn-default">
+                        <i class="fa fa-window-close-o" aria-hidden="true"></i>
+                        <span>Cancel</span>
+                      </button>
+                   </div>
+                </div>
+            </div>           
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <i class="fa fa-align-justify"></i> Search Result
+                    </div>
+                    <div class="card-body">
+                      <table class="table table-responsive-sm table-bordered table-striped table-sm">
+                        <thead>
+                          <tr>
+                            <th>Quote #</th>
+                            <th>Quote Dt.</th>
+                            <th>Customer</th>
+                            <th>Port</th>
+                            <th>Sales Executive</th>
+                            <th>Status</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>BLR-0102</td>
+                            <td>2012/01/01</td>
+                            <td>Customer Name1</td>
+                            <td>COC</td>
+                            <td>Suresh</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>BLR-1002</td>                            
+                            <td>2012/02/01</td>
+                            <td>Zbyněk Phoibos</td>
+                            <td>HKG</td>
+                            <td>Karthik</td>
+                            <td>
+                              <span class="badge badge-danger">Banned</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>BLR-0542</td>
+                            <td>2012/02/01</td>
+                            <td>Einar Randall</td>
+                            <td>CHA</td>                            
+                            <td>Admin</td>
+                            <td>
+                              <span class="badge badge-secondary">Inactive</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>MUM-0832</td>
+                            <td>2012/03/01</td>
+                            <td>Félix Troels</td>
+                            <td>TUT</td>  
+                            <td>Member</td>
+                            <td>
+                              <span class="badge badge-warning">Pending</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>LAX-0832</td>
+                            <td>2012/01/21</td>
+                            <td>Aulus Agmundr</td>
+                            <td>LAX</td> 
+                            <td>Staff</td>
+                            <td>
+                              <span class="badge badge-success">Active</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <nav>
+                        <ul class="pagination">
+                          <li class="page-item">
+                            <a class="page-link" href="#">Prev</a>
+                          </li>
+                          <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">4</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <!--/.col-->
+              </div>            
+          </form>
+      </div>
+      <div class="card-footer">
+        
+      </div>
+    </div>
+  </div>
+</div>

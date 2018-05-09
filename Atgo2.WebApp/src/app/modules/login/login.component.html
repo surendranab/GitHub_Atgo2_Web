@@ -1,0 +1,76 @@
+<!-- <h2>Login Form</h2> -->
+
+<form [style.visibility]="(isLogin) ? 'visible':'hidden'" (ngSubmit)="login(loginForm)" autocomplete="off"
+  #loginForm="ngForm" novalidate>
+<div class="card-body" [ngClass]="(loginForm.submitted && (userId.invalid || passWord.invalid)) ? 'has-error' : ''">		
+    <h1>Login</h1>
+    <p class="text-muted">Sign In to your account</p>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="icon-user"></i>
+        </span>
+      </div>
+      <input type="text" spellcheck="false" class="form-control" placeholder="Username" autocomplete="off" 
+      autocapitalize="off" autocorrect="off" maxlength="100" [(ngModel)]="loginData.username" #userId="ngModel" name="userId" required>
+    </div>
+    <div class="input-group mb-4">
+      <div class="input-group-prepend">
+        <span class="input-group-text">
+          <i class="icon-lock"></i>
+        </span>
+      </div>
+      <input type="password" class="form-control" placeholder="Password" spellcheck="false" (click)="clearReadonly($event)" 
+      oncopy="return false" onpaste="return false" autocomplete="off" autocapitalize="off" autocorrect="off" readonly onfocusin="this.removeAttribute('readonly');"
+      maxlength="50" [(ngModel)]="passwordValue" #passWord="ngModel" name="password" required />
+      <!-- <input type="password" name="dummypass" value="fake" readonly class="hide-log-input" /> -->
+      <label class="login-error has-error" *ngIf="isError">{{errorMessage}}</label>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <button type="submit" class="btn btn-primary px-4">Login</button>
+      </div>
+      <div class="col-6 text-right">
+        <button type="button" class="btn btn-link px-0">Forgot password?</button>
+      </div>
+      <div class="col-6 text-left version-log">Version {{version}}</div>
+    </div>
+  </div>
+</form>
+
+<!-- <form [style.visibility]="(isLogin) ? 'visible':'hidden'" class="login-form" (ngSubmit)="login(loginForm)" autocomplete="off"
+  #loginForm="ngForm" novalidate>
+  <h4 class="text-center">
+    User Login
+  </h4>
+  <div class="form-group login-form-content" [ngClass]="(loginForm.submitted && (username.invalid || password.invalid)) ? 'has-error' : ''">
+    <input type="text" spellcheck="false" class="form-control bg-style" autocomplete="off" autocapitalize="off" autocorrect="off"
+      placeholder="&#61447; User Name" maxlength="100" [(ngModel)]="loginData.username" #userId="ngModel" name="userId" required/>
+    <input type="password" spellcheck="false" (click)="clearReadonly($event)" class="form-control bg-style" oncopy="return false"
+      onpaste="return false" autocomplete="off" autocapitalize="off" autocorrect="off" readonly onfocusin="this.removeAttribute('readonly');"
+      placeholder="&#xf023; Password" maxlength="50" [(ngModel)]="passwordValue" #password="ngModel" name="password" required/>
+    <input type="password" name="dummypass" value="fake" readonly class="hide-log-input" />
+    <label class="login-error has-error" *ngIf="isError">{{errorMessage}}</label>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <div class="col-xs-12"><a (click)="showForgotPassword()" class="link-initial-width">Forgot Password</a></div>
+    <div class="text-center version-log">Version {{version}}</div>
+  </div>
+</form> -->
+
+<!-- <form [style.visibility]="(isForgotPassword) ? 'visible':'hidden'" class="login-form" #forgotPassword>
+  <h4 class="text-center">
+    Forgot Password
+  </h4>
+  <div class="form-group login-form-content padding-6">
+    <input type="text" spellcheck="false" class="form-control" placeholder="&#61447; User Name" name="username" [(ngModel)]="username"
+      required/>
+    <label class="login-error has-error" *ngIf="isResetPasswordError">{{resetPasswordErrorMessage}}</label>
+    <label class="login-error text-success" *ngIf="isResetPasswordSuccess">{{resetPasswordSuccessMessage}}</label>
+    <button type="submit" (click)='resetUserPassword()' class="btn btn-primary">Submit</button>
+    <div class="col-xs-12"><a (click)="showLogin()" class="link-initial-width">Login</a></div>
+  </div>
+</form> -->
+
+<!-- <div *ngIf="sessionExist">
+  <app-confirm-prompt message="Session already exist. Please refresh the page." isNoBackdrop="true" showOK="true" (onYes)="sessionExist = false;"></app-confirm-prompt>
+</div>     -->
