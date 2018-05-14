@@ -11,12 +11,12 @@ import { empty }                                from 'rxjs/observable/empty';
 // import { IMyOptions, IMyDate, IMyDateModel } from 'mydatepicker';
 
 @Component({
-    selector: 'app-QuoteForm',
-    templateUrl: '../view/quote-form.component.html',
-    styleUrls: ['../styles/quote-form.component.css']     
+    selector: 'app-QuoteForm-FindLiner',
+    templateUrl: '../view/quote-findliner.component.html',
+    styleUrls: ['../styles/quote-form.component.css']
   })
 
-  export class QuoteFormComponent {
+  export class QuoteFindLinerComponent {
     quoteFormData: QuoteFormModel;  
     version: any;
     sessionExist : false;
@@ -62,12 +62,7 @@ import { empty }                                from 'rxjs/observable/empty';
       //   this.router.navigate([routeUrl.login]);
       // }
     }
-    
-    openQuoteFindLiner (){
-      //event.preventDefault();      
-      this.router.navigate(['quote/add-quote-findliner']);
-    }
-
+       
     getQuoteById() {      
           this.quoteFormService.getQuoteFormData()
           .map((response) => {

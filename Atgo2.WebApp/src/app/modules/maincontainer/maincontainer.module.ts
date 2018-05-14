@@ -11,6 +11,7 @@ import { DashboardRoutingModule }   from '../dashboard/dashboard-routing.module'
 // import { LoginLayoutComponent }   from '../../shared/components/login-layout.component'
 //import { LoginLayoutModule }   from '../../shared/modules/login-layout.module'
 import { QuoteFormComponent }      from '../quote/component/quote-form.component';
+import { QuoteFindLinerComponent }      from '../quote/component/quote-findliner.component';
 import { QuoteFormService }        from '../quote/service/quote-form.service';
 
 @NgModule({
@@ -20,9 +21,9 @@ import { QuoteFormService }        from '../quote/service/quote-form.service';
       HttpServiceModule,
       DashboardRoutingModule  
     ],
-    declarations: [MaincontainerComponent, QuoteFormComponent],
+    declarations: [MaincontainerComponent, QuoteFormComponent, QuoteFindLinerComponent],
     providers: [QuoteFormService, DashboardService], //DashboardService,
-    exports: [MaincontainerComponent, QuoteFormComponent]
+    exports: [MaincontainerComponent, QuoteFormComponent, QuoteFindLinerComponent]
   })
 
 export class MaincontainerModule {}

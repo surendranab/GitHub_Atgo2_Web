@@ -13,7 +13,8 @@ import { MaincontainerComponent }     from './modules/maincontainer/maincontaine
 import { MaincontainerModule }        from './modules/maincontainer/maincontainer.module';
 import { DashboardComponent }         from './modules/dashboard/dashboard.component';
 import { QuoteSearchComponent }         from './modules/quote/component/quote-search.component';
-// import { DashboardModule }            from './modules/dashboard/dashboard.module';
+import { QuoteFormComponent }            from './modules/quote/component/quote-form.component';
+import { QuoteFindLinerComponent }    from './modules/quote/component/quote-findliner.component';
 import { SiteheaderComponent }        from './modules/siteheader/siteheader.component';
 import { SiteheaderModule }           from './modules/siteheader/siteheader.module';
 
@@ -85,8 +86,8 @@ const appRoutes: Routes = [
     children: [
       { path: '', redirectTo: moduleName.quote, pathMatch: 'full' }, //, , component: LoginComponent
       { path: '', component: QuoteSearchComponent },//loadChildren: 'app/modules/dashboard/dashboard.module#DashboardModule' },
-      //{ path: moduleName.maincontainer, loadChildren: 'app/modules/maincontainer/maincontainer.module#MaincontainerModule' },
-      //{ path: moduleName.siteheader, component: SiteheaderComponent },
+      { path: 'add-quote', component: QuoteFormComponent },
+      { path: 'add-quote-findliner', component: QuoteFindLinerComponent },
       // { path: moduleName.maincontainer, component: MaincontainerComponent }
     ]
   },

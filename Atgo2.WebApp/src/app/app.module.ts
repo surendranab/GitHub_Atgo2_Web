@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { HttpServiceModule }    from './shared/modules/http.module';
+import { NgModule }                 from '@angular/core';
+import { BrowserModule }            from '@angular/platform-browser';
+import { Router }                   from '@angular/router';
+import { FormsModule }              from '@angular/forms';
+import { AppRoutingModule }         from './app-routing.module';
+import { HttpServiceModule }        from './shared/modules/http.module';
 
-import { AppComponent } from './app.component';
-import { AppLayoutComponent } from './shared/components/app-layout.component';
+import { AppComponent }             from './app.component';
+import { AppLayoutComponent }       from './shared/components/app-layout.component';
 //import { LoginComponent } from './modules/login/login.component';
 //import { LoginModule } from './modules/login/login.module';
 
@@ -19,14 +19,15 @@ import { DashboardComponent }       from './modules/dashboard/dashboard.componen
 import { QuoteSearchComponent }     from './modules/quote/component/quote-search.component';
 import { SiteheaderComponent }      from './modules/siteheader/siteheader.component';
 import { SiteheaderService }        from './modules/siteheader/siteheader.service';
-import { LeftsideNavComponent }      from './modules/leftsidenav/leftsidenav.component';
-import { LeftsideNavService }        from './modules/leftsidenav/leftsidenav.service';
+import { LeftsideNavComponent }     from './modules/leftsidenav/leftsidenav.component';
+import { LeftsideNavService }       from './modules/leftsidenav/leftsidenav.service';
 import { MaincontainerComponent }   from './modules/maincontainer/maincontainer.component';
-import { MaincontainerModule }   from './modules/maincontainer/maincontainer.module';
+import { MaincontainerModule }      from './modules/maincontainer/maincontainer.module';
 import { environment }              from '../environments/environment';
-import { HttpService } from './shared/services/http.service';
-import { LoginLayoutModule } from './shared/modules/login-layout.module';
-import { LoginService }         from './modules/login/login.service';
+import { HttpService }              from './shared/services/http.service';
+import { LoginLayoutModule }        from './shared/modules/login-layout.module';
+import { LoginService }             from './modules/login/login.service';
+import { RoleAccessService }        from './shared/services/role-access.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { LoginService }         from './modules/login/login.service';
     MaincontainerModule,
     LoginLayoutModule
   ],
-  providers: [SiteheaderService, LeftsideNavService, LoginService],
+  providers: [RoleAccessService, SiteheaderService, LeftsideNavService, LoginService],
   bootstrap: [AppComponent],
   exports: [SiteheaderComponent, LeftsideNavComponent, MaincontainerComponent, DashboardComponent, QuoteSearchComponent]
 })

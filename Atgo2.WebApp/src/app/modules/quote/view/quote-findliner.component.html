@@ -1,0 +1,311 @@
+<div class="row">
+  <div class="col-lg-12 ">
+      <div class="stepwizard">
+          <div class="stepwizard-row setup-panel">
+              <div class="stepwizard-step col-xs-3"> 
+                  <a href="#step-1" type="button" class="btn btn-success btn-circle">1</a>
+                  <p><small>Primary Info</small></p>
+              </div>
+              <div class="stepwizard-step col-xs-3"> 
+                  <a href="#step-2" type="button" class="btn btn-primary btn-circle">2</a>
+                  <p><small>Find Liner</small></p>
+              </div>
+              <div class="stepwizard-step col-xs-3"> 
+                  <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                  <p><small>Compare Liner Rates</small></p>
+              </div>
+              <div class="stepwizard-step col-xs-3"> 
+                  <a href="#step-4" type="button" class="btn btn-default btn-circle" disabled="disabled">4</a>
+                  <p><small>Finalize</small></p>
+              </div>
+          </div>
+      </div>
+      <div class="panel panel-primary setup-content" id="step-1">
+    <div class="card">
+      <div class="card-header">
+        <button class="d-lg-none" type="button" data-toggle="quote-menu-show">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <strong>Quote</strong> Find Liner (###-####)
+        <div class="field-group float-right">
+          <button class="btn btn-default" (click)="openPreviousForm()">
+              <i class="fa fa-default" aria-hidden="true"></i>
+              <span>Back</span>
+          </button>
+       </div>
+      </div>
+      <div class="card-body">
+        <form action=" " method="post">
+          <div class="row">            
+              <div class="col-lg-3">
+                  <div class="form-group">                
+                    <label for="quoteLiner">Liner Name</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                      </div>                        
+                      <input type="text" id="quoteLiner" name="quoteLiner" class="form-control is-invalid" placeholder="Liner">
+                      <span class="invalid-feedback">Select a Liner</span>
+                    </div>                
+                  </div>
+                </div>
+              <div class="col-lg-3">
+                  <div class="form-group">                
+                    <label for="quoteCustomer">Origin Port</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                      </div>
+                      <input type="text" id="quoteOriginPort" name="quoteOriginPort" class="form-control" placeholder="Origin Port">
+                      <span class="invalid-feedback">Select Origin port</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">                    
+                    <label for="quoteDestinationPort">Destination Port</label>
+                    <div class="input-group ">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-search"></i></span>
+                      </div>
+                      <input type="text" id="quoteDestinationPort" name="quoteDestinationPort" class="form-control" placeholder="Destination Port">
+                      <span class="invalid-feedback">Enter Destination Port</span>
+                    </div>                   
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="form-group">                
+                      <label for="quoteIncoterm">Inco term</label>
+                      <div class="input-group ">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fa fa-search"></i></span>
+                        </div>                    
+                        <input type="text" id="quoteIncoterm" name="quoteIncoterm" class="form-control" placeholder="Select">
+                        <span class="invalid-feedback">Select a Incoterm</span>
+                      </div>
+                    </div>
+                  </div>
+          </div>            
+          <div class="row">
+            <div class='col-lg-12'>
+                <div class="field-group float-left">
+                    <label for="quoteCommission">Commission (%)</label>
+                    <input type="text" id="quoteCommission" name="quoteCommission" class="form-control" placeholder="%">
+                </div>
+                <div class="field-group float-right">
+                    <button class="btn btn-primary" (click)="searchLiner()">
+                        <i class="fa fa-default" aria-hidden="true"></i>
+                        <span>Find Liner</span>
+                    </button>
+                    <button class="btn btn-default" (click)="searchCancel()">
+                        <i class="fa fa-default" aria-hidden="true"></i>
+                        <span>Back</span>
+                    </button>
+                 </div>
+            </div>
+          </div>
+          <div class="row">
+              <div class='col-lg-12'>
+                  <hr>
+              </div>
+            </div>
+          <div class="row">
+              <div class="col-sm-6 col-lg-3">
+                  <div class="brand-card">
+                      <div class="brand-card-header bg-twitter">
+                        <i class="fa fa-ship"></i>                        
+                        <div class="chart-wrapper">
+                          <canvas id="social-box-chart-2" height="30"></canvas>
+                        </div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding brand-card-bg-alt">                        
+                        <div class="text-muted text-uppercase font-weight-bold small">Route</div>                                           
+                      </div>
+                      <div class="brand-card-body brand-card-padding brand-card-bg-alt">
+                        <div class="text-muted text-uppercase font-weight-bold small">Service Type</div>
+                      </div>                      
+                      <div class="brand-card-body brand-card-padding brand-card-hr">
+                        <hr>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">
+                        <div class="text-muted text-uppercase font-weight-bold small">SLAB</div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">
+                        <div class="text-muted text-uppercase font-weight-bold small">Price per Kg</div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">
+                        <div class="text-muted text-uppercase font-weight-bold small">Freight Charge</div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">
+                        <div class="text-muted text-uppercase font-weight-bold small">Commission %</div>
+                      </div>
+                      <div class="card-footer px-3 py-2">                          
+                        <span class="small font-weight-bold">Total</span>
+                      </div>
+                      <div class="card-footer px-3 py-2">
+                        <a class="btn-block text-muted d-flex justify-content-between align-items-center" href="#">
+                          <span class="small font-weight-bold">View More</span>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                  <div class="brand-card">
+                      <div class="brand-card-header bg-warning">
+                        <div class="row">
+                          <div class="chart-wrapper">
+                            Shipping Liner 1
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-group">
+                            <div class="checkbox">
+                              <label><input type="checkbox" value="">Add to Compare</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div>
+                            <div class="text-uppercase text-muted small">Commission</div>
+                            <div class="text-value">973k</div>                            
+                          </div>
+                          <div>
+                            <div class="text-uppercase text-muted small">Selling Price</div>
+                            <div class="text-value">1.792</div>                            
+                          </div>
+                        </div>
+                        </div>
+                      <div class="brand-card-body brand-card-padding">                        
+                        <div class="text-muted text-uppercase font-weight-bold small">NA</div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">                        
+                        <div class="text-muted text-uppercase font-weight-bold small">General Cargo</div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding brand-card-hr">
+                          <hr>
+                        </div>
+                        <div class="brand-card-body brand-card-padding">
+                          <div class="text-muted text-uppercase font-weight-bold small">500</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding">
+                          <div class="text-muted text-uppercase font-weight-bold small">INR 100/-</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding">
+                          <div class="text-muted text-uppercase font-weight-bold small">INR 65,000/-</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding">
+                          <div class="text-muted text-uppercase font-weight-bold small">INR 250/-</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding brand-card-hr">
+                            <hr>
+                          </div>
+                        <div class="brand-card-body">
+                            <div>
+                              <div class="text-value">973k</div>
+                              <div class="text-uppercase text-muted small">Commission</div>
+                            </div>
+                            <div>
+                              <div class="text-value">1.792</div>
+                              <div class="text-uppercase text-muted small">Selling Price</div>
+                            </div>
+                          </div>
+                        <div class="card-footer px-3 py-2">                          
+                          <span class="small font-weight-bold align-items-center">INR 72,000/-</span>
+                        </div>
+                        <div>
+                            <div class="text-value">973k</div>
+                            <div class="text-uppercase text-muted small">followers</div>
+                          </div>
+                  </div>                  
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                  <div class="brand-card">
+                      <div class="brand-card-header bg-warning">
+                        <div class="input-group">
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Add to Compare</label>
+                          </div>
+                        </div>
+                        <div class="chart-wrapper">
+                          Shipping Line 2 
+                        </div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">                        
+                          <div class="text-muted text-uppercase font-weight-bold small">NA</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding">                        
+                          <div class="text-muted text-uppercase font-weight-bold small">General Cargo</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding brand-card-hr">
+                            <hr>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">500</div>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">INR 100/-</div>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">INR 65,000/-</div>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">INR 250/-</div>
+                          </div>
+                          <div class="card-footer px-3 py-2">                          
+                            <span class="small font-weight-bold align-items-center">INR 72,000/-</span>
+                          </div>
+                  </div>                  
+              </div>
+              <div class="col-sm-6 col-lg-3">
+                  <div class="brand-card">
+                      <div class="brand-card-header bg-warning">
+                          <div class="input-group">
+                              <div class="checkbox">
+                                <label><input type="checkbox" value="">Add to Compare</label>
+                              </div>
+                            </div>
+                        <div class="chart-wrapper">
+                          Shipping Line 3
+                        </div>
+                      </div>
+                      <div class="brand-card-body brand-card-padding">                        
+                          <div class="text-muted text-uppercase font-weight-bold small">NA</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding">                        
+                          <div class="text-muted text-uppercase font-weight-bold small">General Cargo</div>
+                        </div>
+                        <div class="brand-card-body brand-card-padding brand-card-hr">
+                            <hr>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">500</div>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">INR 100/-</div>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">INR 65,000/-</div>
+                          </div>
+                          <div class="brand-card-body brand-card-padding">
+                            <div class="text-muted text-uppercase font-weight-bold small">INR 250/-</div>
+                          </div>
+                          <div class="card-footer px-3 py-2">                          
+                            <span class="small font-weight-bold align-items-center">INR 72,000/-</span>
+                          </div>
+                  </div>
+              </div>
+          </div>
+        </form>      
+      </div>
+      <div class="card-footer">
+        <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+        <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-primary setup-content" id="step-2" (click)="(click)"></div>
+  <div class="panel panel-primary setup-content" id="step-3"></div>
+  <div class="panel panel-primary setup-content" id="step-4"></div>  
+  </div>
+</div>
