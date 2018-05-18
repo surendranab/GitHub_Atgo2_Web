@@ -63,7 +63,7 @@ export class HttpService {
 
   buildUrl(resourceUrl: any) {
     return environment.serviceBaseUrl + resourceUrl;
-  };
+  }
 
   createAuthorizationHeader() {
     this.getToken();

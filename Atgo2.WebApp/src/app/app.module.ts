@@ -4,6 +4,7 @@ import { Router }                   from '@angular/router';
 import { FormsModule }              from '@angular/forms';
 import { AppRoutingModule }         from './app-routing.module';
 import { HttpServiceModule }        from './shared/modules/http.module';
+import { BsModalModule }         from 'ng2-bs3-modal/ng2-bs3-modal';
 
 import { AppComponent }             from './app.component';
 import { AppLayoutComponent }       from './shared/components/app-layout.component';
@@ -47,6 +48,7 @@ import { RoleAccessService }        from './shared/services/role-access.service'
     BrowserModule,    
     AppRoutingModule,
     FormsModule,
+    //BsModalModule,
     HttpServiceModule,
     MaincontainerModule,
     LoginLayoutModule

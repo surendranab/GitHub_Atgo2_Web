@@ -81,7 +81,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><i class="fa fa-search"></i></span>
                             </div>
-                            <input type="text" id="quoteCustomer" name="quoteCustomer" class="form-control" placeholder="Customer">
+                            <input type="text" id="quoteCustomer" name="quoteCustomer" class="form-control" placeholder="Customer" (click)="openCustomerModal()">
                             <span class="invalid-feedback">Select a Customer</span>
                           </div>
                       </div>       
@@ -226,9 +226,18 @@
               </div>            
           </form>
       </div>
-      <div class="card-footer">
-        
-      </div>
+    <div class="card-footer">        
     </div>
   </div>
-  
+</div>
+
+<!-- [backdrop]="static" [keyboard]="static"  -->
+<!-- <bs-modal #modal>
+  <bs-modal-header>
+    <h4 class="modal-title">I'm a modal!</h4>
+  </bs-modal-header>
+  <bs-modal-body>
+    Hello World!
+  </bs-modal-body>
+  <bs-modal-footer></bs-modal-footer>
+</bs-modal> -->

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+//import * as $ from 'jquery';
+// window["$"] = $;
+// window["jQuery"] = $;
 
 @Component({
   selector: 'app-layout',
@@ -6,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'
   ]
 })
+
 export class AppComponent {
   title = 'Atgo-Quote';
 }

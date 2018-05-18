@@ -49,7 +49,7 @@ import { empty }                                from 'rxjs/observable/empty';
         quoteGoodsDescriptionForPrint: '',
         quoteGoodsDescriptionDetail: '',
         quoteRemarks: ''
-      };
+      }
 
       this.paramId = +this.route.snapshot.params['id'];
 
@@ -76,7 +76,7 @@ import { empty }                                from 'rxjs/observable/empty';
             }
           );
         }
-  };
+  }
 
 
 

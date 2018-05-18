@@ -2,6 +2,8 @@
 import { NgModule }                 from '@angular/core';
 import { CommonModule }             from '@angular/common';
 import { FormsModule }              from '@angular/forms';
+import { BsModalModule }            from 'ng2-bs3-modal';
+
 //General imports
 import { HttpServiceModule }        from '../../../shared/modules/http.module';
 //Form imports
@@ -19,6 +21,7 @@ import { QuoteFormRoutingModule }   from '../route/quote-form-routing.module';
       CommonModule,
       FormsModule,
       HttpServiceModule,
+      BsModalModule,
       QuoteFormRoutingModule,     
     ],
     declarations: [QuoteSearchComponent, QuoteFormComponent, QuoteFindLinerComponent],
