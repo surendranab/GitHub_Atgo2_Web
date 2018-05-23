@@ -7,6 +7,7 @@ export class ApiEndPointService {
   UpdateUserEula = 'api/user';
   GetLeftsideNavItems = 'api/navdata/getLeftsideNavItems';
   GetQuoteFormData = 'api/quote/getQuoteData';
+  searchQuoteData = 'api/quote/searchData';
   SystemLogout = 'api/token/logout/System';
   UserLogout = 'api/token/logout/User';
   SessionTimeout = 'api/common/LoginTimeOut';

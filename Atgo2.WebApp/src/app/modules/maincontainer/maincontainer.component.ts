@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DashboardComponent }                 from '../dashboard/dashboard.component';
 import { DashboardService }                   from '../dashboard/dashboard.service';
 import { routeUrl }                           from '../../app.config';
-  
+
 @Component({
     selector: 'app-maincontainer',
     templateUrl: './maincontainer.component.html',

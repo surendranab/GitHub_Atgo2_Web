@@ -9,9 +9,9 @@ import {
   import {
     Router
   } from '@angular/router';
-  import {
-    BsModalComponent
-  } from 'ng2-bs3-modal';
+  // import {
+  //   BsModalComponent
+  // } from 'ng2-bs3-modal';
   
   @Component({
     selector: 'app-confirm-prompt',
@@ -19,8 +19,8 @@ import {
     styleUrls: ['../styles/confirm-prompt.component.less']
   })
   export class ConfirmPromptComponent implements AfterViewInit {
-    @ViewChild('modal')
-    modal: BsModalComponent;
+    // @ViewChild('modal')
+    // modal: BsModalComponent;
   
     @Input() message: string;
     @Input() showCancel: boolean;
@@ -35,24 +35,24 @@ import {
     static = 'static';
   
     ngAfterViewInit() {
-      setTimeout(() => {
-        this.modal.open();
-      }, 1);
+      // setTimeout(() => {
+      //   this.modal.open();
+      // }, 1);
     }
   
-    onYesClick() {
-      this.onYes.emit();
-      this.modal.close();
-    }
+    // onYesClick() {
+    //   this.onYes.emit();
+    //   this.modal.close();
+    // }
   
-    onNoClick() {
-      this.onNo.emit();
-      this.modal.close();
-    }
+    // onNoClick() {
+    //   this.onNo.emit();
+    //   this.modal.close();
+    // }
   
-    onCancelClick() {
-      this.onCancel.emit();
-      this.modal.close();
-    }
+    // onCancelClick() {
+    //   this.onCancel.emit();
+    //   this.modal.close();
+    // }
   }
   

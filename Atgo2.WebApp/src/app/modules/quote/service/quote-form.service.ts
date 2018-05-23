@@ -3,6 +3,7 @@ import { HttpService }        from '../../../shared/services/http.service';
 import { ApiEndPointService } from '../../../shared/services/api-end-point.service';
 import { RoleAccessService } from '../../../shared/services/role-access.service';
 import { QuoteFormModel }    from '../model/quote-form.model';
+import { QuoteSearchModel }     from '../model/quote-search.model';
 
 @Injectable()
 export class QuoteFormService {
@@ -16,6 +17,10 @@ export class QuoteFormService {
 
     getQuoteFormData() {
         return this.http.getAuth(this.api.GetQuoteFormData);
+    }
+
+    searchQuoteData(searchQuote: QuoteSearchModel) {
+        return this.http.postAuth(this.api.searchQuoteData, searchQuote);
     }
 
     checkTokenExist() {

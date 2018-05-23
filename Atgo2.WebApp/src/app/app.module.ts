@@ -4,7 +4,9 @@ import { Router }                   from '@angular/router';
 import { FormsModule }              from '@angular/forms';
 import { AppRoutingModule }         from './app-routing.module';
 import { HttpServiceModule }        from './shared/modules/http.module';
-import { BsModalModule }         from 'ng2-bs3-modal/ng2-bs3-modal';
+// import { BsModalModule }         from 'ng2-bs3-modal/ng2-bs3-modal';
+// import { MyDatePickerModule }         from 'mydatepicker';
+import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 
 import { AppComponent }             from './app.component';
 import { AppLayoutComponent }       from './shared/components/app-layout.component';
@@ -37,7 +39,7 @@ import { RoleAccessService }        from './shared/services/role-access.service'
     EmptyRouteComponent,
     //LoginComponent,
     //LoginLayoutComponent,
-    //DashboardLayoutComponent,
+    //DashboardLayoutComponent,    
     SiteheaderComponent,
     LeftsideNavComponent,
     DashboardComponent,
@@ -49,6 +51,7 @@ import { RoleAccessService }        from './shared/services/role-access.service'
     AppRoutingModule,
     FormsModule,
     //BsModalModule,
+    AngularDateTimePickerModule,
     HttpServiceModule,
     MaincontainerModule,
     LoginLayoutModule

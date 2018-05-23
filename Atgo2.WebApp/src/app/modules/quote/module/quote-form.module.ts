@@ -2,7 +2,9 @@
 import { NgModule }                 from '@angular/core';
 import { CommonModule }             from '@angular/common';
 import { FormsModule }              from '@angular/forms';
-import { BsModalModule }            from 'ng2-bs3-modal';
+//import { BsModalModule }            from 'ng2-bs3-modal';
+//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MyDatePickerModule }       from 'mydatepicker';
 
 //General imports
 import { HttpServiceModule }        from '../../../shared/modules/http.module';
@@ -21,8 +23,9 @@ import { QuoteFormRoutingModule }   from '../route/quote-form-routing.module';
       CommonModule,
       FormsModule,
       HttpServiceModule,
-      BsModalModule,
-      QuoteFormRoutingModule,     
+      //MyDatePickerModule,
+      //BsModalModule,
+      QuoteFormRoutingModule      
     ],
     declarations: [QuoteSearchComponent, QuoteFormComponent, QuoteFindLinerComponent],
     providers: [QuoteFormService], 
