@@ -1,6 +1,8 @@
 import { NgModule }             from '@angular/core';
 import { CommonModule }         from '@angular/common';
 import { FormsModule }          from '@angular/forms';
+import { MatDialogModule }      from '@angular/material/dialog';
+import { HttpModule } from '@angular/http';
 
 import { HttpServiceModule }    from '../../shared/modules/http.module';
 import { LoginComponent }       from './login.component';
@@ -14,6 +16,7 @@ import { ConfirmPromptModule }  from '../../shared/modules/confirm-prompt.module
       FormsModule,
       HttpServiceModule,
       LoginRoutingModule,
+      MatDialogModule,
       ConfirmPromptModule
     ],
     declarations: [LoginComponent],

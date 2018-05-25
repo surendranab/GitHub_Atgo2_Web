@@ -1,7 +1,11 @@
 import { Component, OnInit, OnDestroy }     from '@angular/core';
 import { Router, ParamMap, ActivatedRoute } from '@angular/router';
+import { MatDialog, MatDialogConfig }       from "@angular/material";
+import { HttpClientModule }                 from '@angular/common/http'; 
+import { HttpModule }                       from '@angular/http';
 import { LoginService }                     from './login.service';
 import { LoginModel }                       from './login.model';
+import { ForgotPasswordDialogComponent }      from '../forgotpasswordialog/forgotpassword-dialog.component';
 //   import {
 //     DataService
 //   } from '../../shared/services/data.service';
@@ -32,7 +36,7 @@ import { routeUrl }                         from '../../app.config';
     notifyObjSub: any;
     sessionExist: boolean;
   
-    constructor(public loginService: LoginService, private router: Router) { //, private validationService: ValidationService
+    constructor( private dialog: MatDialog, public loginService: LoginService, private router: Router) { //, private validationService: ValidationService 
       this.loginData = {
         username: '',
         password: ''        
@@ -54,7 +58,14 @@ import { routeUrl }                         from '../../app.config';
         //this.validationService.defaultFlags();
       }
     }
-        
+    
+    openForgotPasswordDialog() {
+      const dialogConfig = new MatDialogConfig();
+      dialogConfig.disableClose = true;
+      dialogConfig.autoFocus = true;
+      this.dialog.open(ForgotPasswordDialogComponent, dialogConfig);
+  }
+
     ngOnDestroy() {
       if (this.notifyObjSub) {
         this.notifyObjSub.unsubscribe();
