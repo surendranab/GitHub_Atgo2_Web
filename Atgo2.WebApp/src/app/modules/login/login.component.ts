@@ -61,8 +61,19 @@ import { routeUrl }                         from '../../app.config';
     
     openForgotPasswordDialog() {
       const dialogConfig = new MatDialogConfig();
-      dialogConfig.disableClose = true;
+      dialogConfig.disableClose = false;
       dialogConfig.autoFocus = true;
+      dialogConfig.data = {
+        id: 1,
+        title: 'Angular For Beginners'
+      };
+      dialogConfig.id = 'forgotPasswordDialogWindow';
+      dialogConfig.height = "500px";
+      dialogConfig.width = "500px";
+      dialogConfig.position = {
+        'top': '0',
+        left: '0'
+      };
       this.dialog.open(ForgotPasswordDialogComponent, dialogConfig);
   }
 
@@ -97,7 +108,7 @@ import { routeUrl }                         from '../../app.config';
   
     showForgotPassword() {
       this.isResetPasswordError = false;
-      this.isResetPasswordSuccess = false;
+      this.isResetPasswordSuccess = false;      
       this.userName = this.loginData.username;
       this.isForgotPassword = true;
       this.isLogin = false;

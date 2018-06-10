@@ -1,9 +1,11 @@
 import { NgModule }                 from '@angular/core';
 import { BrowserModule }            from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router }                   from '@angular/router';
-import { FormsModule }              from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }              from '@angular/forms';
 import { AppRoutingModule }         from './app-routing.module';
 import { HttpServiceModule }        from './shared/modules/http.module';
+import { MatDialogModule }      from '@angular/material/dialog';
 // import { BsModalModule }         from 'ng2-bs3-modal/ng2-bs3-modal';
 // import { MyDatePickerModule }         from 'mydatepicker';
 import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
@@ -17,6 +19,7 @@ import { EmptyRouteComponent }      from './shared/components/empty-route.compon
 import { ValidationService }        from './shared/services/validation.service';
 import { ConfirmPromptModule }      from './shared/modules/confirm-prompt.module';
 import { LoginLayoutComponent }     from './shared/components/login-layout.component';
+import { ForgotPasswordDialogComponent } from './modules/forgotpasswordialog/forgotpassword-dialog.component';
 // import { DashboardLayoutComponent } from './shared/components/dashboard-layout.component';
 import { DashboardComponent }       from './modules/dashboard/dashboard.component';
 import { QuoteSearchComponent }     from './modules/quote/component/quote-search.component';
@@ -43,15 +46,18 @@ import { RoleAccessService }        from './shared/services/role-access.service'
     SiteheaderComponent,
     LeftsideNavComponent,
     DashboardComponent,
-    QuoteSearchComponent
+    QuoteSearchComponent  
     //MaincontainerComponent
   ],
   imports: [
     BrowserModule,    
     AppRoutingModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
     //BsModalModule,
     AngularDateTimePickerModule,
+    MatDialogModule,
     HttpServiceModule,
     MaincontainerModule,
     LoginLayoutModule

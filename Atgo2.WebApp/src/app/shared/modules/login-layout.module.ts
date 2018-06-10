@@ -3,22 +3,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-// import { BsModalModule } from 'ng2-bs3-modal';
+import { MatDialogModule }      from '@angular/material/dialog';
 import { LoginLayoutComponent } from '../components/login-layout.component';
 import { LoginComponent } from '../../modules/login/login.component';
-//import { LoginModule } from '../../modules/login/login.module';
 import { LoginRoutingModule } from '../../modules/login/login-routing.module';
-
+import { ForgotPasswordDialogComponent } from '../../modules/forgotpasswordialog/forgotpassword-dialog.component';
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     CommonModule,
-    //BsModalModule,   
-    //LoginModule //LoginRoutingModule
+    MatDialogModule
   ],
-  declarations: [ LoginLayoutComponent, LoginComponent ], //LoginComponent
-  exports: [ LoginLayoutComponent, LoginComponent ] // LoginComponent
+  declarations: [ LoginLayoutComponent, LoginComponent, ForgotPasswordDialogComponent ], 
+  exports: [ LoginLayoutComponent, LoginComponent, ForgotPasswordDialogComponent ],
+  entryComponents: [ForgotPasswordDialogComponent]
 })
 export class LoginLayoutModule { }
